@@ -1,4 +1,4 @@
-package com.howtodoinjava.app;
+package com.sb3minikube.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

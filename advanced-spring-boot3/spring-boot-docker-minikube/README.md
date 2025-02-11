@@ -86,6 +86,7 @@ Après avoir démarré Minikube, configurez-le pour utiliser votre image locale 
 Nous avons deux options pour déployer notre application : utiliser des commandes kubectl ou un fichier YAML avec toute la configuration. Nous opterons pour un fichier YAML.
 
 Dans le dossier racine de votre application, créez un fichier nommé deployment.yaml avec le contenu suivant :
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -190,15 +191,15 @@ La seule différence par rapport au fichier de déploiement est que, au lieu de 
 
 	Assurez-vous que le nom du sélecteur app est identique à celui que nous avons défini dans le fichier de déploiement.
 
-spec.ports.nodePort : spécifie le port sur lequel le service sera exposé à l’extérieur. Dans notre cas, nous utilisons le port 30005 (la plage de ports valides est 30000-32767).
+```spec.ports.nodePort``` : spécifie le port sur lequel le service sera exposé à l’extérieur. Dans notre cas, nous utilisons le port 30005 (la plage de ports valides est 30000-32767).
 
 Appliquez le service avec la commande :
 
-kubectl apply -f service.yaml
+```kubectl apply -f service.yaml```
 
 Pour vérifier si notre service fonctionne, exécutez la commande :
 
-kubectl get svc
+```kubectl get svc```
 
 7. Démonstration
 
@@ -212,6 +213,6 @@ Félicitations, nous avons reçu notre réponse de Kubernetes.
 
 Après avoir hébergé avec succès notre application dans le cluster Kubernetes, nous pouvons accéder au tableau de bord Minikube pour vérifier les différents composants.
 
-minikube dashboard
+```minikube dashboard```
 
 Le tableau de bord nous montre tous les composants que nous avons ; dans notre exemple, nous avons 1 déploiement et 2 pods, et nous pouvons ajouter ou supprimer ce que nous voulons. Fondamentalement, le tableau de bord est juste une interface qui nous permet d’interagir avec et de gérer notre cluster Kubernetes.
