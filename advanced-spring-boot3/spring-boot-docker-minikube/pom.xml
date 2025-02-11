@@ -15,7 +15,7 @@
     <artifactId>spring-boot-docker-minikube</artifactId>
 
     <name>spring-boot-docker-minikube</name>
-    <url>https://howtodoinjava.com</url>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

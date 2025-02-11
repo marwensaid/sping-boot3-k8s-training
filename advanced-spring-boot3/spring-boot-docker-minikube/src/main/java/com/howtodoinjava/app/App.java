@@ -9,14 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class App {
 
-  @RestController
-  public class FooController {
-
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String foo() {
-      return "Response!";
-    }
-  }
+  // TODO: Handle GET requests to /hello endpoint
 
   public static void main(String[] args) {
     SpringApplication.run(App.class, args);
