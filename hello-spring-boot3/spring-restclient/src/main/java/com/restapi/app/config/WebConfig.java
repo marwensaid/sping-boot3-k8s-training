@@ -12,12 +12,12 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class WebConfig {
 
-  @Bean
-  public WebClient webClient() {
-    HttpAsyncClientBuilder clientBuilder = HttpAsyncClients.custom();
-    //clientBuilder.setDefaultRequestConfig();
-    CloseableHttpAsyncClient client = clientBuilder.build();
-    ClientHttpConnector connector = new HttpComponentsClientHttpConnector(client);
-    return WebClient.builder().clientConnector(connector).build();
-  }
+    @Bean
+    public WebClient webClient() {
+        HttpAsyncClientBuilder clientBuilder = HttpAsyncClients.custom();
+        //clientBuilder.setDefaultRequestConfig();
+        CloseableHttpAsyncClient client = clientBuilder.build();
+        ClientHttpConnector connector = new HttpComponentsClientHttpConnector(client);
+        return WebClient.builder().clientConnector(connector).build();
+    }
 }

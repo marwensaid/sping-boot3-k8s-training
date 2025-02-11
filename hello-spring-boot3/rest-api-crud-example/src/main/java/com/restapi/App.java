@@ -10,16 +10,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class App implements CommandLineRunner {
 
-  public static void main(String[] args) {
-    SpringApplication.run(App.class, args);
-  }
+    @Autowired
+    ItemRepository itemRepository;
 
-  @Autowired
-  ItemRepository itemRepository;
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
 
-  @Override
-  public void run(String... args) throws Exception {
-    itemRepository.save(new Item(null, "Item 1"));
-    itemRepository.save(new Item(null, "Item 2"));
-  }
+    @Override
+    public void run(String... args) throws Exception {
+        itemRepository.save(new Item(null, "Item 1"));
+        itemRepository.save(new Item(null, "Item 2"));
+    }
 }

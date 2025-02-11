@@ -1,83 +1,63 @@
 package com.howtodoinjava.demo.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.howtodoinjava.demo.exception.RecordNotFoundException;
 import com.howtodoinjava.demo.model.EmployeeEntity;
 import com.howtodoinjava.demo.repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
-@Service
+import java.util.List;
+
+/**
+ * TODO :
+ * The EmployeeService class provides methods to manage employee records.
+ * It interacts with the EmployeeRepository to perform CRUD operations.
+ */
 public class EmployeeService {
-	
-	@Autowired
-	EmployeeRepository repository;
-	
-	public List<EmployeeEntity> getAllEmployees()
-	{
-		List<EmployeeEntity> result = (List<EmployeeEntity>) repository.findAll();
-		
-		if(result.size() > 0) {
-			return result;
-		} else {
-			return new ArrayList<EmployeeEntity>();
-		}
-	}
-	
-	public EmployeeEntity getEmployeeById(Long id) throws RecordNotFoundException 
-	{
-		Optional<EmployeeEntity> employee = repository.findById(id);
-		
-		if(employee.isPresent()) {
-			return employee.get();
-		} else {
-			throw new RecordNotFoundException("No employee record exist for given id");
-		}
-	}
-	
-	public EmployeeEntity createOrUpdateEmployee(EmployeeEntity entity) 
-	{
-		if(entity.getId()  == null) 
-		{
-			entity = repository.save(entity);
-			
-			return entity;
-		} 
-		else 
-		{
-			Optional<EmployeeEntity> employee = repository.findById(entity.getId());
-			
-			if(employee.isPresent()) 
-			{
-				EmployeeEntity newEntity = employee.get();
-				newEntity.setEmail(entity.getEmail());
-				newEntity.setFirstName(entity.getFirstName());
-				newEntity.setLastName(entity.getLastName());
 
-				newEntity = repository.save(newEntity);
-				
-				return newEntity;
-			} else {
-				entity = repository.save(entity);
-				
-				return entity;
-			}
-		}
-	} 
-	
-	public void deleteEmployeeById(Long id) throws RecordNotFoundException 
-	{
-		Optional<EmployeeEntity> employee = repository.findById(id);
-		
-		if(employee.isPresent()) 
-		{
-			repository.deleteById(id);
-		} else {
-			throw new RecordNotFoundException("No employee record exist for given id");
-		}
-	} 
+    @Autowired
+    EmployeeRepository repository;
+
+    /**
+     * TODO :
+     * Retrieves all employee records.
+     *
+     * @return a list of all employees.
+     */
+    public List<EmployeeEntity> getAllEmployees() {
+        return null;
+    }
+
+    /**
+     * TODO :
+     * Retrieves an employee record by ID.
+     *
+     * @param id the ID of the employee.
+     * @return the employee entity.
+     * @throws RecordNotFoundException if no employee record exists for the given ID.
+     */
+    public EmployeeEntity getEmployeeById(Long id) throws RecordNotFoundException {
+        return null;
+    }
+
+    /**
+     * TODO :
+     * Creates or updates an employee record.
+     *
+     * @param entity the employee entity to create or update.
+     * @return the created or updated employee entity.
+     */
+    public EmployeeEntity createOrUpdateEmployee(EmployeeEntity entity) {
+        return null;
+    }
+
+    /**
+     * TODO :
+     * Deletes an employee record by ID.
+     *
+     * @param id the ID of the employee.
+     * @throws RecordNotFoundException if no employee record exists for the given ID.
+     */
+    public void deleteEmployeeById(Long id) throws RecordNotFoundException {
+        return;
+    }
 }

@@ -12,22 +12,22 @@ import org.springframework.web.client.RestTemplate;
 public class ChatGptConfig {
 
 
-  @Value("${openai.api.key}")
-  private String openaiApiKey;
+    @Value("${openai.api.key}")
+    private String openaiApiKey;
 
 
-  @Bean
-  public RestTemplate restTemplate() {
+    @Bean
+    public RestTemplate restTemplate() {
 
-    RestTemplate restTemplate = new RestTemplate();
+        RestTemplate restTemplate = new RestTemplate();
 
-    restTemplate.getInterceptors().add((request, body, execution) -> {
-      request.getHeaders().add("Authorization", "Bearer " + openaiApiKey);
-      return execution.execute(request, body);
-    });
+        restTemplate.getInterceptors().add((request, body, execution) -> {
+            request.getHeaders().add("Authorization", "Bearer " + openaiApiKey);
+            return execution.execute(request, body);
+        });
 
-    restTemplate.getInterceptors().add(new RequestResponseLoggingInterceptor());
-    restTemplate.setRequestFactory(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
-    return restTemplate;
-  }
+        restTemplate.getInterceptors().add(new RequestResponseLoggingInterceptor());
+        restTemplate.setRequestFactory(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
+        return restTemplate;
+    }
 }
