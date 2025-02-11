@@ -1,0 +1,4 @@
+.idea
+chatgpt-demo/target/
+spring-boot-docker-minikube/target/
+spring-boot-resilience4j/target/
