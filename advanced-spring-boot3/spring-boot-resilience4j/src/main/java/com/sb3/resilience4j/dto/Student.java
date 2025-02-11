@@ -1,12 +1,12 @@
-package com.howtodoinjava.resilience4j.dto;
+package com.sb3.resilience4j.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
+
+// TODO: Add missing annotations
 public class Student {
 
 	private int id;

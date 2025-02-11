@@ -1,4 +1,4 @@
-package com.howtodoinjava.resilience4j;
+package com.sb3.resilience4j;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

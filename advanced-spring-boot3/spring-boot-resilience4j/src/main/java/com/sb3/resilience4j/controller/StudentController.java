@@ -1,4 +1,4 @@
-package com.howtodoinjava.resilience4j.controller;
+package com.sb3.resilience4j.controller;
 
 import io.github.resilience4j.ratelimiter.RequestNotPermitted;
 import org.springframework.http.HttpHeaders;
@@ -14,24 +14,29 @@ import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 @RestController
 public class StudentController {
 
-  @GetMapping(value = "/student/{id}")
-  @RateLimiter(name = "rateLimitingAPI", fallbackMethod = "rateLimitingFallback")
+  // TODO : This method handles GET requests to retrieve student details by ID.
+  // It uses the RateLimiter pattern to limit the number of requests.
+  // If the rate limit is exceeded, the `rateLimitingFallback` method is called.
+  //
+  // @param id the ID of the student
+  // @return ResponseEntity containing the student details or a fallback response
+
   public ResponseEntity getStudentById(@PathVariable int id) {
 
-    return ResponseEntity.ok("Details requested for " + id);
+    return null;
   }
 
-  @GetMapping(value = "/course/{id}")
-  @Bulkhead(name = "courseBulkheadApi", fallbackMethod = "bulkheadFallback")
+  /** TODO :
+   * This method handles GET requests to retrieve course details by ID.
+   * It uses the Bulkhead pattern to limit the number of concurrent calls.
+   * If the Bulkhead limit is reached, the `bulkheadFallback` method is called.
+   *
+   * @param id the ID of the course
+   * @return ResponseEntity containing the course details or a fallback response
+   */
+
   public ResponseEntity getCourse(@PathVariable int id) {
-    System.out.println("In course details for: " + id);
-    try {
-      Thread.sleep(1000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
-    System.out.println("Returning course details for: " + id);
-    return ResponseEntity.ok("Course" + id);
+    return null;
   }
 
   public ResponseEntity bulkheadFallback(int id,
