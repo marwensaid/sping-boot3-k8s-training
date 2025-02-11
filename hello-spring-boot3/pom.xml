@@ -39,24 +39,11 @@
   </dependencies>
 
   <modules>
-    <module>declarative-http-client-example</module>
-    <module>inventory-management-app/inventory-mgmt-service</module>
-    <module>mybatis-example</module>
-    <module>problem-detail-error-responses-example</module>
-    <module>rsocket</module>
-    <module>virtual-threads-demo</module>
-    <module>webflux-part-event-api-example</module>
-    <module>spring-boot-hateoas</module>
-    <module>security</module>
+
     <module>rest-api-crud-example</module>
-    <module>async-controller-example</module>
-    <module>ehcache-example</module>
-    <module>task-scheduler</module>
-    <module>jsp-demo</module>
-    <module>jasper-reports-example</module>
+
     <module>spring-restclient</module>
-    <module>soap-ws-example</module>
-    <module>soap-client-example</module>
+
   </modules>
 
   <build>

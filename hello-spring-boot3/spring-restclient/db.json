@@ -2,22 +2,22 @@
   "employees": [
     {
       "id": 1,
-      "name": "Lokesh",
+      "name": "Donald",
       "status": "Active"
     },
     {
       "id": 2,
-      "name": "Andy",
+      "name": "Elon",
       "status": "Inactive"
     },
     {
       "id": 3,
-      "name": "Brian",
+      "name": "Vladimir",
       "status": "Active"
     },
     {
       "id": 4,
-      "name": "Charles",
+      "name": "Abdelaziz",
       "status": "Inactive"
     }
   ]
