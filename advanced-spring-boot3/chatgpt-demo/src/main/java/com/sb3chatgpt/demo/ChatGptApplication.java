@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo;
+package com.sb3chatgpt.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo.interceptor;
+package com.sb3chatgpt.demo.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

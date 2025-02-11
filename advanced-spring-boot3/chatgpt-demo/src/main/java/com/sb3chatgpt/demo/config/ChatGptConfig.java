@@ -1,6 +1,6 @@
-package com.howtodoinjava.demo.config;
+package com.sb3chatgpt.demo.config;
 
-import com.howtodoinjava.demo.interceptor.RequestResponseLoggingInterceptor;
+import com.sb3chatgpt.demo.interceptor.RequestResponseLoggingInterceptor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +11,10 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class ChatGptConfig {
 
+
   @Value("${openai.api.key}")
   private String openaiApiKey;
+
 
   @Bean
   public RestTemplate restTemplate() {

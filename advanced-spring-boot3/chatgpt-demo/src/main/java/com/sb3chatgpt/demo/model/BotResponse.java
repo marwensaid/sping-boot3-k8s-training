@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo.model;
+package com.sb3chatgpt.demo.model;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
