@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-app
+  namespace: monitoring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: log-app
+  template:
+    metadata:
+      labels:
+        app: log-app
+    spec:
+      containers:
+      - name: log-app
+        image: busybox
+        command: ["sh", "-c", "while true; do echo $(date) - Log de test; sleep 2; done"]
