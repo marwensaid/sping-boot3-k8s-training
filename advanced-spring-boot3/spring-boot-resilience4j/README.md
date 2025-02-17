@@ -241,5 +241,3 @@ Comme prévu, nous devrions voir les 5 premiers appels réussir et les suivants 
 Testons l’API course avec 10 threads avec une période de montée en charge de 2 secondes.
 
 Comme nous avons un appel Thread.sleep() dans l’API course pour simuler une API intensive en temps, le test de l’application produit les résultats attendus, et la 11e requête échoue.
-
-Cela complète la traduction des sections 4, 5 et 6 du tutoriel. Si vous avez d’autres questions ou
